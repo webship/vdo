@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_machine_name
+    - node.type.product
+  module:
+    - machine_name
+id: node.product.field_machine_name
+field_name: field_machine_name
+entity_type: node
+bundle: product
+label: 'Machine name'
+description: "Please provide a machine name for your product. So that it will be used for locating the base code in:<br>\r\n<strong>Products</strong> <code>/var/www/html/products/machine_name</code><br>\r\n<strong>dev</strong> <code>/var/www/html/dev/machine_name/dev1</code><br>\r\n<strong>test</strong> <code>/var/www/html/test/machine_name/test1</code><br>\r\n<strong>demos</strong> <code>/var/www/html/demos/machine_name/demo1</code><br>\r\n<strong>projects</strong> <code>/var/www/html/projects/machine_name/project_name</code><br>\r\n"
+required: true
+translatable: false
+default_value:
+  -
+    value: machine_name
+default_value_callback: ''
+settings: {  }
+field_type: machine_name

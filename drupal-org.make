@@ -63,3 +63,9 @@ projects[entity_browser][version] = 1.0
 
 projects[super_login][type] = module
 projects[super_login][version] = 1.0-beta3
+
+projects[machine_name][type] = module
+projects[machine_name][version] = 1.x-dev
+
+projects[hook_post_action][type] = module
+projects[hook_post_action][version] = 1.0-beta1

@@ -67,4 +67,14 @@ function vdo_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+  
+  // Foresed configs.
+  $profile_path = drupal_get_path('profile', 'vdo') . '/config/install/';
+  $configs['features.bundle.vdo'] = $profile_path . 'features.bundle.vdo.yml';
+
+  foreach ($configs as $name => $config_path) {
+    $data = (array) Yaml::parse($config_path);
+    $config = \Drupal::configFactory()->getEditable($name);
+    $config->setData($data)->save(TRUE);
+  }
 }

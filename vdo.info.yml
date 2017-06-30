@@ -40,9 +40,11 @@ dependencies:
   - filter
   - help
   - history
+  - hook_post_action
   - image
   - layout_discovery
   - link
+  - machine_name
   - menu_block
   - menu_link_content
   - menu_ui

@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.product.field_description
+    - field.field.node.product.field_git
+    - field.field.node.product.field_machine_name
+    - node.type.product
+  module:
+    - link
+    - machine_name
+    - user
+id: node.product.default
+targetEntityType: node
+bundle: product
+mode: default
+content:
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_git:
+    weight: 2
+    label: inline
+    settings:
+      trim_length: null
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_machine_name:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: machine_name
+    region: content
+hidden:
+  links: true
