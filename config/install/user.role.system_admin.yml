@@ -5,3 +5,4 @@ id: system_admin
 label: 'System admin'
 weight: -4
 is_admin: true
+permissions: {  }

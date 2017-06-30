@@ -5,3 +5,5 @@ id: anonymous
 label: 'Anonymous user'
 weight: -10
 is_admin: false
+permissions:
+  - 'access comments'

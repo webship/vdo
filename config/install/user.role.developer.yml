@@ -5,3 +5,8 @@ id: developer
 label: Developer
 weight: -6
 is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'administer statistics'
+  - 'administer taxonomy'
+  - 'view post access counter'

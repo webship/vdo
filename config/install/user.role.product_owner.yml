@@ -5,3 +5,7 @@ id: product_owner
 label: 'Product Owner'
 weight: -5
 is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'administer taxonomy'
+  - 'view post access counter'

@@ -5,3 +5,14 @@ id: authenticated
 label: 'Authenticated user'
 weight: -9
 is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'view the administration theme'

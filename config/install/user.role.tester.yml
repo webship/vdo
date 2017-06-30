@@ -5,3 +5,6 @@ id: tester
 label: Tester
 weight: -7
 is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'view post access counter'

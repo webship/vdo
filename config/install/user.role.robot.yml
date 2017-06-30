@@ -5,3 +5,6 @@ id: robot
 label: Robot
 weight: -8
 is_admin: null
+permissions:
+  - 'view post access counter'
+  - 'view the administration theme'
