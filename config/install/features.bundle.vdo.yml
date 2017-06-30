@@ -6,9 +6,9 @@ machine_name: vdo
 description: 'VDO Visual do helps Drupal 8 developers manage base code development work cycle for custom distributions/profiles.'
 assignments:
   alter:
-    core: 1
-    uuid: 1
-    user_permissions: 0
+    core: true
+    uuid: true
+    user_permissions: true
     enabled: true
     weight: 0
   base:
@@ -52,7 +52,7 @@ assignments:
     enabled: true
     weight: 12
   forward_dependency:
-    enabled: false
+    enabled: true
     weight: 4
   namespace:
     enabled: false

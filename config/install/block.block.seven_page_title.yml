@@ -6,7 +6,7 @@ dependencies:
 id: seven_page_title
 theme: seven
 region: header
-weight: -30
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

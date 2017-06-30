@@ -4,77 +4,74 @@ description: 'VDO Visual do helps Drupal 8 developers manage base code developme
 core: 8.x
 version: 8.x-1.x-dev
 dependencies:
-  - action
-  - advanced_text_formatter
-  - automated_cron
-  - block
-  - block_class
-  - block_content
-  - breakpoint
-  - ckeditor
-  - config
-  - config_update
-  - config_update_ui
-  - contact
-  - contextual
+  - admin_toolbar
+  - admin_toolbar_tools
+  - adminimal_admin_toolbar
   - ctools
   - ctools_block
   - ctools_views
-  - datetime
-  - datetime_range
+  - action
+  - automated_cron
+  - block
+  - breakpoint
+  - config
+  - contextual
+  - block_content
+  - menu_link_content
   - dblog
-  - ds
-  - ds_extras
-  - dynamic_page_cache
-  - editor
-  - entity
-  - entity_browser
-  - features
-  - features_ui
   - field
-  - field_group
-  - field_layout
   - field_ui
-  - file
   - filter
   - help
   - history
-  - image
-  - layout_discovery
-  - menu_block
-  - menu_link_content
   - menu_ui
   - node
-  - options
-  - page_cache
-  - page_manager
-  - page_manager_ui
-  - panels
-  - panels_ipe
   - path
-  - pathauto
-  - quickedit
-  - rdf
   - search
   - shortcut
   - statistics
-  - super_login
   - syslog
   - system
   - taxonomy
-  - text
-  - token
+  - editor
   - toolbar
-  - tour
   - update
   - user
   - views
   - views_ui
+  - datetime_range
+  - field_layout
+  - layout_discovery
+  - features
+  - features_ui
+  - ds
+  - ds_extras
+  - datetime
+  - file
+  - image
+  - link
+  - options
+  - text
+  - advanced_text_formatter
+  - field_group
+  - page_manager
+  - page_manager_ui
+  - entity_browser
+  - block_class
+  - config_update
+  - config_update_ui
+  - diff
+  - entity
+  - menu_block
+  - pathauto
+  - token
+  - panels
+  - panels_ipe
+  - super_login
+  - better_exposed_filters
 themes:
-  - adminimal_theme
+ - adminimal_theme
 distribution:
   name: VDO
-  install:
-    theme: adminimal_theme
 features: true
 package: VDO
