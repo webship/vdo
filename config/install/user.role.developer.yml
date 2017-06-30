@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies: {  }
+id: developer
+label: Developer
+weight: -6
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access panels in-place editing'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer advanced pane settings'
+  - 'administer blocks'
+  - 'administer image styles'
+  - 'administer pages'
+  - 'administer pane access'
+  - 'administer panels layouts'
+  - 'administer panels styles'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer search'
+  - 'administer shortcuts'
+  - 'administer statistics'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete configuration'
+  - 'export configuration'
+  - 'import configuration'
+  - 'link to any page'
+  - 'revert configuration'
+  - 'switch shortcut sets'
+  - 'synchronize configuration'
+  - 'use ipe with page manager'
+  - 'use panels caching features'
+  - 'use panels dashboard'
+  - 'use panels locks'
+  - 'view config updates report'
+  - 'view pane admin links'
+  - 'view post access counter'

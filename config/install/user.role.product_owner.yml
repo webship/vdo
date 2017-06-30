@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies: {  }
+id: product_owner
+label: 'Product Owner'
+weight: -5
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'customize shortcut links'
+  - 'switch shortcut sets'
+  - 'view post access counter'

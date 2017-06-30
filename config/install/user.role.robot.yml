@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+id: robot
+label: Robot
+weight: -8
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access user profiles'
+  - 'customize shortcut links'

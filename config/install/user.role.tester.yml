@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: tester
+label: Tester
+weight: -7
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'customize shortcut links'
+  - 'view post access counter'

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.system_admin
+  module:
+    - user
+id: user_remove_role_action.system_admin
+label: 'Remove the System Admin role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: system_admin
