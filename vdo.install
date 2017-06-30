@@ -5,6 +5,7 @@
  * Install, update and uninstall functions for the vdo installation profile.
  */
 
+use Symfony\Component\Yaml\Yaml;
 use Drupal\user\Entity\User;
 use Drupal\user\RoleInterface;
 use Drupal\shortcut\Entity\Shortcut;
