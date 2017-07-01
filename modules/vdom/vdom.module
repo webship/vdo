@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains vdom.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function vdom_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the vdom module.
+    case 'help.page.vdom':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('VDO Manager') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -25,11 +25,7 @@ function vdo_install() {
   $user_settings = \Drupal::configFactory()->getEditable('user.settings');
   $user_settings->set('register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL)->save(TRUE);
 
-  // Enable default permissions for system roles.
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['access comments']);
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access comments', 'post comments', 'skip comment approval']);
-
-  // Assign user 1 the "administrator" role.
+  // Assign user 1 the "system_admin" role.
   $user = User::load(1);
   $user->roles[] = 'system_admin';
   $user->save();
@@ -45,29 +41,45 @@ function vdo_install() {
   // Allow authenticated users to use shortcuts.
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
 
-  // Populate the default shortcut set.
   $shortcut = Shortcut::create([
     'shortcut_set' => 'default',
-    'title' => t('Add content'),
-    'weight' => -20,
-    'link' => ['uri' => 'internal:/node/add'],
+    'title' => t('Products'),
+    'weight' => -34,
+    'link' => ['uri' => 'internal:/admin/structure/product'],
   ]);
   $shortcut->save();
-
+  
   $shortcut = Shortcut::create([
     'shortcut_set' => 'default',
-    'title' => t('All content'),
-    'weight' => -19,
-    'link' => ['uri' => 'internal:/admin/content'],
+    'title' => t('dev'),
+    'weight' => -33,
+    'link' => ['uri' => 'internal:/admin/structure/dev'],
   ]);
   $shortcut->save();
-
-  // Allow all users to use search.
-  user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['search content']);
-  user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['search content']);
-
-  // Enable the admin theme.
-  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+  
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('test'),
+    'weight' => -32,
+    'link' => ['uri' => 'internal:/admin/structure/test'],
+  ]);
+  $shortcut->save();
+  
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('Demos'),
+    'weight' => -31,
+    'link' => ['uri' => 'internal:/admin/structure/demo'],
+  ]);
+  $shortcut->save();
+  
+  $shortcut = Shortcut::create([
+    'shortcut_set' => 'default',
+    'title' => t('Projects'),
+    'weight' => -30,
+    'link' => ['uri' => 'internal:/admin/structure/project'],
+  ]);
+  $shortcut->save();
   
   // Foresed configs.
   $profile_path = drupal_get_path('profile', 'vdo') . '/config/install/';

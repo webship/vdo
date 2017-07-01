@@ -1,0 +1,5 @@
+name: VDO Manager
+type: module
+description: VDO Manager
+core: 8.x
+package: VDO

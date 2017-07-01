@@ -68,6 +68,7 @@ dependencies:
   - toolbar
   - update
   - user
+  - vdom
   - views
   - views_ui
 themes:

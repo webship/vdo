@@ -1,0 +1,29 @@
+entity.project.add_form:
+  route_name: entity.project.add_form
+  title: 'Add Project'
+  appears_on:
+    - entity.project.collection
+
+entity.product.add_form:
+  route_name: entity.product.add_form
+  title: 'Add Product'
+  appears_on:
+    - entity.product.collection
+
+entity.dev.add_form:
+  route_name: entity.dev.add_form
+  title: 'Add dev'
+  appears_on:
+    - entity.dev.collection
+
+entity.test.add_form:
+  route_name: entity.test.add_form
+  title: 'Add test'
+  appears_on:
+    - entity.test.collection
+
+entity.demo.add_form:
+  route_name: entity.demo.add_form
+  title: 'Add demo'
+  appears_on:
+    - entity.demo.collection

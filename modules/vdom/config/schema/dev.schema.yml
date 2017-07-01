@@ -1,0 +1,12 @@
+vdom.dev.*:
+  type: config_entity
+  label: 'Dev config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
