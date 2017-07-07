@@ -1,5 +1,5 @@
 {
-  "name": "drupal/vdo",
+  "name": "webship/vdo",
   "description": "VDO Visual do helps Drupal 8 developers manage base code development work cycle for custom distributions/profiles on a local development, or servers.",
   "type": "drupal-profile",
   "license": "GPL-2.0+",
