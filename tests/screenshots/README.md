@@ -1,0 +1,1 @@
+# VDO Tests Screenshots
