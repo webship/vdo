@@ -4,5 +4,5 @@ Feature: Aonymous user
   Scenario: Check that anonymous users cannot access admin pages.
     Given I am an anonymous user
      When I go to "/admin"
-     Then I should see "Access denied"
+     Then I should see "You are not authorized to access this page."
   
