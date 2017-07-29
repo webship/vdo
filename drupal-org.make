@@ -38,7 +38,7 @@ projects[admin_toolbar][type] = module
 projects[admin_toolbar][version] = 1.19
 
 projects[adminimal_admin_toolbar][type] = module
-projects[adminimal_admin_toolbar][version] = 1.4
+projects[adminimal_admin_toolbar][version] = 1.5
 
 projects[better_exposed_filters][type] = module
 projects[better_exposed_filters][version] = 3.0-alpha2
