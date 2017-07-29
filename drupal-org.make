@@ -62,7 +62,7 @@ projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.0
 
 projects[super_login][type] = module
-projects[super_login][version] = 1.0-beta3
+projects[super_login][version] = 1.0
 
 projects[machine_name][type] = module
 projects[machine_name][version] = 1.x-dev
