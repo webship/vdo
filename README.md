@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/webship/vdo.svg?branch=8.x-1.x)](https://travis-ci.org/webship/vdo)
 # VDO
 
 **Visual do** helps Drupal 8 developers manage base code development work cycle
