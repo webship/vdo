@@ -75,5 +75,4 @@ themes:
   - adminimal_theme
 distribution:
   name: VDO
-features: true
 package: VDO
