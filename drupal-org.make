@@ -50,7 +50,7 @@ projects[diff][type] = module
 projects[diff][version] = 1.0-rc1
 
 projects[devel][type] = module
-projects[devel][version] = 1.0-rc2
+projects[devel][version] = 1.0
 
 projects[pathauto][type] = module
 projects[pathauto][version] = 1.0

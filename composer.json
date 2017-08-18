@@ -57,7 +57,7 @@
     "drupal/better_exposed_filters": "3.0-alpha3",
     "drupal/features": "3.5",
     "drupal/diff": "1.0-rc1",
-    "drupal/devel": "1.0-rc2",
+    "drupal/devel": "1.0",
     "drupal/pathauto": "1.0",
     "drupal/entity": "1.0-alpha4",
     "drupal/entity_browser": "1.1",
