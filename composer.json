@@ -60,7 +60,7 @@
     "drupal/devel": "1.0-rc2",
     "drupal/pathauto": "1.0",
     "drupal/entity": "1.0-alpha4",
-    "drupal/entity_browser": "1.0",
+    "drupal/entity_browser": "1.1",
     "drupal/super_login": "1.0",
     "drupal/machine_name": "1.x-dev",
     "drupal/hook_post_action": "1.0-beta1"
