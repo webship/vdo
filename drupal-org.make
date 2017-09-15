@@ -35,7 +35,7 @@ projects[menu_block][type] = module
 projects[menu_block][version] = 1.4
 
 projects[admin_toolbar][type] = module
-projects[admin_toolbar][version] = 1.19
+projects[admin_toolbar][version] = 1.20
 
 projects[adminimal_admin_toolbar][type] = module
 projects[adminimal_admin_toolbar][version] = 1.5
