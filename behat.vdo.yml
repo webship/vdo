@@ -14,6 +14,7 @@ default:
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
         - Drupal\DrupalExtension\Context\BatchContext
+        - Behatch\Context\SystemContext
         - behatch:browser:
             timeout: 1
         - behatch:debug:
@@ -52,25 +53,7 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
-      drush:
-        alias: 'local'
-      drupal:
-        drupal_root: '../../'
-      region_map:
-        header: '#page-head'
-        header_area: '#edit-group-header-area'
-        content: '.main-region'
-        content_area: '#edit-group-content-area'
-        sidebar: '.sidebar-rigeon'
-        sidebar_area: '#edit-group-sidebar-area'
-        footer: 'footer'
-        dropdown_menu: 'ul.nav.dropdown-menu'
-      selectors:
-        login_form_selector: '#user-login-form'
-        message_selector: '.status-message'
-        error_message_selector: 'status-message__alert p'
-        success_message_selector: '.status-message ul, .status-message p'
-    Sanpi\Behatch\Extension: ~
+    Behatch\Extension: ~
     emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
       name: html
       renderer: Twig,Behat2
