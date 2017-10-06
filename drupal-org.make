@@ -56,7 +56,7 @@ projects[pathauto][type] = module
 projects[pathauto][version] = 1.0
 
 projects[entity][type] = module
-projects[entity][version] = 1.0-alpha4
+projects[entity][version] = 1.0-beta1
 
 projects[entity_browser][type] = module
 projects[entity_browser][version] = 1.1
