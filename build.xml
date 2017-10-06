@@ -9,11 +9,11 @@
   <property name="db.host" value="localhost" />
   <property name="db.user" value="root" />
   <property name="db.password" value="" />
-  <property name="db.database" value="drupal" />
+  <property name="db.database" value="test_vdo" />
   <property name="db.url" value="${db.type}://${db.user}:${db.password}@${db.host}/${db.database}" />
-  <property name="docroot" value="docroot" />
-  <property name="profile" value="${docroot}/profiles/vdo" />
-  <property name="site" value="${docroot}/sites/default" />
+  <property name="web" value="web" />
+  <property name="profile" value="${web}/profiles/vdo" />
+  <property name="site" value="${web}/sites/default" />
   <property name="version" value="HEAD" />
 
   <!-- Finds Composer, NPM, and rsync. -->
@@ -49,7 +49,7 @@
     <exec command="${npm} run install-libraries" passthru="true" />
 
     <!-- rsync the profile, excluding developer flotsam. -->
-    <filesync destinationDir="${profile}" rsyncPath="${rsync}" sourceDir="." verbose="false" exclude=".idea,bin,build.xml,.git,.gitignore,${docroot},karma.conf.js,*.make,node_modules,.travis.yml,vendor" />
+    <filesync destinationDir="${profile}" rsyncPath="${rsync}" sourceDir="." verbose="false" exclude=".idea,bin,build.xml,.git,.gitignore,${web},karma.conf.js,*.make,node_modules,.travis.yml,vendor" />
 
     <!-- JS libraries and contrib modules were copied over by the file sync. -->
     <delete dir="libraries" failonerror="true" quiet="true" />
@@ -60,30 +60,7 @@
     <filesync destinationDir="." rsyncPath="${rsync}" sourceDir="${profile}/" verbose="false" exclude="libraries,modules/contrib,behat.local.yml" />
   </target>
 
-  <!-- Builds vdo with Composer. -->
-  <target name="build" depends="env">
-    <if>
-      <equals arg1="${version}" arg2="HEAD" />
-      <then>
-        <exec command="${composer} install" passthru="true" />
-      </then>
-      <else>
-        <if>
-          <not>
-            <isset property="branch" />
-          </not>
-          <then>
-            <exec command="git rev-parse --abbrev-ref HEAD" outputProperty="branch" />
-          </then>
-        </if>
-        <exec command="git checkout ${version}" />
-        <exec command="${composer} install" passthru="true" />
-        <exec command="git checkout ${branch}" />
-      </else>
-    </if>
-  </target>
-
-  <!-- Prepares the docroot for installation via the UI. -->
+  <!-- Prepares the web for installation via the UI. -->
   <target name="preinstall" depends="uninstall">
     <if>
       <not>
@@ -110,21 +87,22 @@
     </if>
   </target>
 
-  <!-- Installs vdo and sets it up for development. -->
-  <target name="install" depends="env">
+  <!-- Install with drush site install -->
+  <target name="install-with-drush-site-install" depends="env">
     <!-- Use passthru() when executing drush site-install so that we'll know if errors occur. -->
-    <exec command="${drush} site-install vdo --yes --site-name=vdo --account-name=admin --account-pass=admin --db-url=${db.url}" dir="${docroot}" passthru="true" />
-    <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${docroot}" />
-    <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${docroot}" />
-    <exec command="${drush} config-set system.logging error_level all --yes" dir="${docroot}" />
+    <exec command="${drush} site-install vdo --yes --site-name='Test vdo1c' --account-name=admin --account-pass=dD.123123ddd --account-mail=admin@webship.org --db-url=${db.url}" dir="${web}" passthru="true" />
+    <exec command="${drush} en vbp_text_and_image --yes" dir="${web}" />
+    <exec command="${drush} config-set system.performance css.preprocess 0 --yes --format=boolean" dir="${web}" />
+    <exec command="${drush} config-set system.performance js.preprocess 0 --yes --format=boolean" dir="${web}" />
+    <exec command="${drush} config-set system.logging error_level all --yes" dir="${web}" />
   </target>
 
-  <!-- Builds the vdo code base from HEAD, overwriting docroot, and
+  <!-- Builds the vdo code base from HEAD, overwriting web, and
   executes all database updates. -->
   <target name="update" depends="env">
     <phingcall target="build" />
     <exec command="${drush} cache-rebuild" />
-    <exec command="${drush} updatedb --yes" dir="${docroot}" passthru="true" />
+    <exec command="${drush} updatedb --yes" dir="${web}" passthru="true" />
     <!-- TODO: Execute manual update steps as needed. -->
   </target>
 
@@ -139,16 +117,16 @@
   <!-- Builds a vdo code base from legacy Drush make files. -->
   <target name="build-legacy" depends="env">
     <if>
-      <available file="${docroot}" property="docroot.exists" />
+      <available file="${web}" property="web.exists" />
       <then>
         <phingcall target="package" />
-        <delete dir="${docroot}" />
+        <delete dir="${web}" />
       </then>
     </if>
 
-    <exec command="${drush} make drupal-org-core.make ${docroot} --yes" />
-    <exec command="${drush} make drupal-org.make ${docroot} --no-core --yes" />
-    <exec command="${composer} require drush/drush" dir="${docroot}" />
+    <exec command="${drush} make drupal-org-core.make ${web} --yes" />
+    <exec command="${drush} make drupal-org.make ${web} --no-core --yes" />
+    <exec command="${composer} require drush/drush" dir="${web}" />
 
     <phingcall target="push" />
   </target>
@@ -175,7 +153,7 @@
     <delete failonerror="true" includeemptydirs="true">
       <fileset dir="." defaultexcludes="false">
         <include name="bin/**" />
-        <include name="${docroot}/**" />
+        <include name="${web}/**" />
         <include name="node_modules/**" />
         <include name="vendor/**" />
       </fileset>

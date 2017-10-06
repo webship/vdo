@@ -6,7 +6,7 @@ cache:
     - "$HOME/.composer/cache"
     - "$HOME/.drush/cache"
     - "$HOME/.npm"
-    - "$HOME/.selenium/cache"   
+    - "$HOME/.selenium/cache"    
 php:
   - 7.1
 env:
@@ -23,7 +23,7 @@ addons:
       - xfonts-100dpi
       - xfonts-75dpi
       - xfonts-scalable
-      - xserver-xorg-core 
+      - xserver-xorg-core
 mysql:
   database: test_vdo
   username: root
@@ -43,16 +43,16 @@ before_install:
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> drupal.php.ini;
-  - echo 'max_input_time = 180' >> drupal.php.ini;
-  - echo 'max_input_vars = 10000' >> drupal.php.ini;
-  - echo 'memory_limit = 2048M' >> drupal.php.ini;
-  - echo 'error_reporting = E_ALL' >> drupal.php.ini;
-  - echo 'post_max_size = 64M' >> drupal.php.ini;
-  - echo 'upload_max_filesize = 32M' >> drupal.php.ini;
-  - echo 'max_file_uploads = 40' >> drupal.php.ini;
-  - echo 'sendmail_path = /bin/true' >> drupal.php.ini;
-  - phpenv config-add drupal.php.ini
+  - echo 'max_execution_time = 1200' >> vdo.php.ini;
+  - echo 'max_input_time = 180' >> vdo.php.ini;
+  - echo 'max_input_vars = 10000' >> vdo.php.ini;
+  - echo 'memory_limit = 2048M' >> vdo.php.ini;
+  - echo 'error_reporting = E_ALL' >> vdo.php.ini;
+  - echo 'post_max_size = 64M' >> vdo.php.ini;
+  - echo 'upload_max_filesize = 32M' >> vdo.php.ini;
+  - echo 'max_file_uploads = 40' >> vdo.php.ini;
+  - echo 'sendmail_path = /bin/true' >> vdo.php.ini;
+  - phpenv config-add vdo.php.ini
   - phpenv rehash
    
   # Configure and run the virtual display.
@@ -72,7 +72,7 @@ install:
   - composer install --no-interaction -vvv
   
   ## Install with drush.
-  - cd docroot
+  - cd web
   - drush site-install vdo --yes --site-name='VDO' --account-name=admin --account-pass=dD.123123ddd --account-mail=vdo@webship.org --db-url="mysql://root:@localhost/test_vdo" 
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
