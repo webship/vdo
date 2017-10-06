@@ -59,7 +59,6 @@ dependencies:
   - search
   - shortcut
   - statistics
-  - super_login
   - syslog
   - system
   - taxonomy
@@ -68,9 +67,10 @@ dependencies:
   - toolbar
   - update
   - user
-  - vdom
   - views
   - views_ui
+# VDO Manager
+  - vdom
 themes:
   - adminimal_theme
 distribution:
