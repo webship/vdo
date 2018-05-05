@@ -30,8 +30,6 @@ dependencies:
   - editor
   - entity
   - entity_browser
-  - features
-  - features_ui
   - field
   - field_group
   - field_layout
@@ -69,8 +67,6 @@ dependencies:
   - user
   - views
   - views_ui
-# VDO Manager
-  - vdom
 themes:
   - adminimal_theme
 distribution:
