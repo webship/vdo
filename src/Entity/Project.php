@@ -9,7 +9,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *
  * @ConfigEntityType(
  *   id = "project",
- *   label = @Translation("Project"),
+ *   label = @Translation("Projects"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\vdo\ProjectListBuilder",
@@ -30,11 +30,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/project/{project}",
- *     "add-form" = "/admin/structure/project/add",
- *     "edit-form" = "/admin/structure/project/{project}/edit",
- *     "delete-form" = "/admin/structure/project/{project}/delete",
- *     "collection" = "/admin/structure/project"
+ *     "canonical" = "/admin/projects/{project}",
+ *     "add-form" = "/admin/projects/add",
+ *     "edit-form" = "/admin/projects/{project}/edit",
+ *     "delete-form" = "/admin/projects/{project}/delete",
+ *     "collection" = "/admin/projects"
  *   }
  * )
  */

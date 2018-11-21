@@ -3,72 +3,37 @@ type: profile
 description: 'VDO Visual do helps Drupal 8 developers manage base code development work cycle for custom distributions/profiles.'
 core: 8.x
 version: 8.x-1.x-dev
-dependencies:
-  - action
-  - admin_toolbar
-  - admin_toolbar_tools
-  - adminimal_admin_toolbar
-  - advanced_text_formatter
-  - automated_cron
-  - block
-  - block_class
-  - block_content
-  - breakpoint
-  - config
-  - config_update
-  - config_update_ui
-  - contextual
-  - ctools
-  - ctools_block
-  - ctools_views
-  - datetime
-  - datetime_range
-  - dblog
-  - diff
-  - ds
-  - ds_extras
-  - editor
-  - entity
-  - entity_browser
-  - field
-  - field_group
-  - field_layout
-  - field_ui
-  - file
-  - filter
-  - help
-  - history
-  - hook_post_action
-  - image
-  - layout_discovery
-  - link
-  - machine_name
-  - menu_block
-  - menu_link_content
-  - menu_ui
-  - node
-  - options
-  - page_manager
-  - page_manager_ui
-  - panels
-  - panels_ipe
-  - path
-  - pathauto
-  - search
-  - shortcut
-  - statistics
-  - syslog
+package: VDO
+distribution:
+  name: VDO
+  install:
+    theme: adminimal_theme
+install:
   - system
-  - taxonomy
-  - text
-  - token
-  - toolbar
-  - update
+  - action
+  - syslog
+  - dblog
+  - block
   - user
   - views
   - views_ui
+  - menu_ui
+  - config
+  - config_provider
+  - config_snapshot
+  - config_filter
+  - config_split
+  - config_merge
+  - config_merge_filter
+  - config_sync
+  - config_ignore
+  - config_distro
+  - config_distro_ignore
+  - config_update
+  - config_update_ui
+  - config_normalizer
+  - toolbar
+  - admin_toolbar
+  - adminimal_admin_toolbar
 themes:
   - adminimal_theme
-distribution:
-  name: VDO
-package: VDO

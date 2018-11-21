@@ -9,7 +9,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *
  * @ConfigEntityType(
  *   id = "dev",
- *   label = @Translation("Dev"),
+ *   label = @Translation("Devs"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\vdo\DevListBuilder",
@@ -30,11 +30,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/dev/{dev}",
- *     "add-form" = "/admin/structure/dev/add",
- *     "edit-form" = "/admin/structure/dev/{dev}/edit",
- *     "delete-form" = "/admin/structure/dev/{dev}/delete",
- *     "collection" = "/admin/structure/dev"
+ *     "canonical" = "/admin/devs/{dev}",
+ *     "add-form" = "/admin/devs/add",
+ *     "edit-form" = "/admin/devs/{dev}/edit",
+ *     "delete-form" = "/admin/devs/{dev}/delete",
+ *     "collection" = "/admin/devs"
  *   }
  * )
  */

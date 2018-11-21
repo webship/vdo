@@ -9,7 +9,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *
  * @ConfigEntityType(
  *   id = "test",
- *   label = @Translation("Test"),
+ *   label = @Translation("Tests"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
  *     "list_builder" = "Drupal\vdo\testListBuilder",
@@ -30,11 +30,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     "uuid" = "uuid"
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/test/{test}",
- *     "add-form" = "/admin/structure/test/add",
- *     "edit-form" = "/admin/structure/test/{test}/edit",
- *     "delete-form" = "/admin/structure/test/{test}/delete",
- *     "collection" = "/admin/structure/test"
+ *     "canonical" = "/admin/tests/{test}",
+ *     "add-form" = "/admin/tests/add",
+ *     "edit-form" = "/admin/tests/{test}/edit",
+ *     "delete-form" = "/admin/tests/{test}/delete",
+ *     "collection" = "/admin/tests"
  *   }
  * )
  */

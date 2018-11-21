@@ -1,45 +1,31 @@
-
-# Project menu items definition
-entity.project.collection:
-  title: 'Projects'
-  route_name: entity.project.collection
-  description: 'List Projects'
-  parent: system.admin_structure
-  weight: 99
-
-
-# Product menu items definition
 entity.product.collection:
   title: 'Products'
   route_name: entity.product.collection
   description: 'List Products base code.'
-  parent: system.admin_structure
-  weight: 99
-
-
-# Dev menu items definition
+  parent: system.admin
+  weight: -100
 entity.dev.collection:
-  title: 'Dev'
+  title: 'Devs'
   route_name: entity.dev.collection
   description: 'List Development sites'
-  parent: system.admin_structure
-  weight: 99
-
-
-# Test menu items definition
+  parent: system.admin
+  weight: -90
 entity.test.collection:
-  title: 'Test'
+  title: 'Tests'
   route_name: entity.test.collection
   description: 'List Test sites'
-  parent: system.admin_structure
-  weight: 99
-
-
-# demo menu items definition
+  parent: system.admin
+  weight: -80
 entity.demo.collection:
-  title: 'demo'
+  title: 'Demos'
   route_name: entity.demo.collection
   description: 'List demo sites'
-  parent: system.admin_structure
-  weight: 99
+  parent: system.admin
+  weight: -70
+entity.project.collection:
+  title: 'Projects'
+  route_name: entity.project.collection
+  description: 'List Projects'
+  parent: system.admin
+  weight: -60
 
