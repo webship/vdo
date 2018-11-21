@@ -1,5 +1,6 @@
 sudo: required
 dist: trusty
+group: deprecated-2017Q4
 language: php
 cache:
   bundler: true
@@ -42,16 +43,16 @@ before_install:
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> vdo.php.ini;
-  - echo 'max_input_time = 180' >> vdo.php.ini;
-  - echo 'max_input_vars = 10000' >> vdo.php.ini;
-  - echo 'memory_limit = 2000M' >> vdo.php.ini;
-  - echo 'error_reporting = E_ALL' >> vdo.php.ini;
-  - echo 'post_max_size = 64M' >> vdo.php.ini;
-  - echo 'upload_max_filesize = 32M' >> vdo.php.ini;
-  - echo 'max_file_uploads = 40' >> vdo.php.ini;
-  - echo 'sendmail_path = /bin/true' >> vdo.php.ini;
-  - phpenv config-add vdo.php.ini
+  - echo 'max_execution_time = 1200' >> varbase.php.ini;
+  - echo 'max_input_time = 180' >> varbase.php.ini;
+  - echo 'max_input_vars = 10000' >> varbase.php.ini;
+  - echo 'memory_limit = 2000M' >> varbase.php.ini;
+  - echo 'error_reporting = E_ALL' >> varbase.php.ini;
+  - echo 'post_max_size = 64M' >> varbase.php.ini;
+  - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
+  - echo 'max_file_uploads = 40' >> varbase.php.ini;
+  - echo 'sendmail_path = /bin/true' >> varbase.php.ini;
+  - phpenv config-add varbase.php.ini
   - phpenv rehash
 
   # Configure and run the virtual display.
