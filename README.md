@@ -1,8 +1,10 @@
 [![Build Status](https://travis-ci.org/webship/vdo.svg?branch=8.x-1.x)](https://travis-ci.org/webship/vdo)
 # VDO
 
-**Visual do** helps Drupal 8 developers manage base code development work cycle
-for custom distributions/profiles on a local development, or servers.
+The Visual Distribution Operator (VDO) management system helps
+ Drupal 8 distribution maintainers manage the base code and logic for the
+ work cycle of development with number of workspaces for custom profiles,
+ sub-profiles on local development machines or servers.
 
 Constructing your Linux development computer or servers with:
 

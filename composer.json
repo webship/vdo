@@ -1,6 +1,6 @@
 {
   "name": "webship/vdo",
-  "description": "VDO Visual do helps Drupal 8 developers manage base code development work cycle for custom distributions/profiles on a local development, or servers.",
+  "description": "The Visual Distribution Operator (VDO) management system helps Drupal 8 distribution maintainers manage the base code and logic for the work cycle of development with number of workspaces for custom profiles, sub-profiles on local development machines or servers.",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
@@ -32,7 +32,7 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "webflo/drupal-finder": "^1.0.0",
     "webmozart/path-util": "^2.3",
-    "drupal/core": "^8.6.0",
+    "drupal/core": "*",
     "drupal/config_provider": "^2.0",
     "drupal/config_snapshot": "^1.0",
     "drupal/config_merge": "^1.0",
