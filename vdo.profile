@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Site configuration for VDO site installation.

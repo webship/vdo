@@ -7,7 +7,7 @@ package: VDO
 distribution:
   name: VDO
   install:
-    theme: adminimal_theme
+    theme: vdo_install
 install:
   - system
   - action
@@ -32,6 +32,7 @@ install:
   - config_update
   - config_update_ui
   - config_normalizer
+  - config_perms
   - toolbar
   - admin_toolbar
   - adminimal_admin_toolbar

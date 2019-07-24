@@ -12,6 +12,7 @@ projects[] = config_filter
 projects[] = config_normalizer
 projects[] = config_split
 projects[] = config_ignore
+projects[] = config_perms
 
 projects[] = adminimal_theme
 projects[] = admin_toolbar
