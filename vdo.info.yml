@@ -38,3 +38,4 @@ install:
   - adminimal_admin_toolbar
 themes:
   - adminimal_theme
+  - vdo_install
