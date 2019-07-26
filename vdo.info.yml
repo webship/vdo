@@ -4,6 +4,7 @@ description: 'VDO Visual do helps Drupal 8 developers manage base code developme
 core: 8.x
 version: 8.x-1.x-dev
 package: VDO
+project: vdo
 distribution:
   name: VDO
   install:
