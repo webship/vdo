@@ -32,12 +32,10 @@
     "drupal-composer/drupal-scaffold": "@stable",
     "webflo/drupal-finder": "@stable",
     "webmozart/path-util": "@stable",
-    "drupal/console": "@stable",
-    "drush/drush": "@stable",
-    "drupal/coder": "@stable",
+    "drupal/core": "@stable",
     "drupal/admin_toolbar": "@stable",
     "drupal/uikit": "@stable",
-    "drupal/uikit": "@stable"
+    "drupal/uikit_admin": "@stable"
   },
   "require-dev": {
     "drush/drush": "@stable",
