@@ -35,6 +35,13 @@
     "drupal/console": "@stable",
     "drush/drush": "@stable",
     "drupal/coder": "@stable",
+    "drupal/admin_toolbar": "@stable",
+    "drupal/uikit": "@stable",
+    "drupal/uikit": "@stable"
+  },
+  "require-dev": {
+    "drush/drush": "@stable",
+    "drupal/coder": "@stable",
     "drupal/drupal-extension": "@stable",
     "phing/phing": "@stable",
     "behat/behat": "@stable",
@@ -44,22 +51,7 @@
     "behat/mink-zombie-driver": "@stable",
     "behat/mink-selenium2-driver": "@stable",
     "behatch/contexts": "@stable",
-    "emuse/behat-html-formatter": "@stable",
-    "drupal/core": "@stable",
-    "drupal/config_provider": "@stable",
-    "drupal/config_snapshot": "@stable",
-    "drupal/config_merge": "@stable",
-    "drupal/config_sync": "@stable",
-    "drupal/config_distro": "@stable",
-    "drupal/config_update": "@stable",
-    "drupal/config_filter": "@stable",
-    "drupal/config_normalizer": "@stable",
-    "drupal/config_split": "@stable",
-    "drupal/config_ignore": "@stable",
-    "drupal/config_perms": "@stable", 
-    "drupal/adminimal_theme": "@stable",
-    "drupal/admin_toolbar": "@stable",
-    "drupal/adminimal_admin_toolbar": "@stable"
+    "emuse/behat-html-formatter": "@stable"
   },
   "config": {
     "bin-dir": "bin/",

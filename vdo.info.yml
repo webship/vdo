@@ -8,35 +8,24 @@ project: vdo
 distribution:
   name: VDO
   install:
-    theme: vdo_install
+    theme: vdo
+themes:
+  - uikit
+  - uikit_admin
+  - vdo
 install:
   - system
   - action
   - syslog
   - dblog
+  - help
   - block
   - user
   - views
   - views_ui
   - menu_ui
   - config
-  - config_provider
-  - config_snapshot
-  - config_filter
-  - config_split
-  - config_merge
-  - config_merge_filter
-  - config_sync
-  - config_ignore
-  - config_distro
-  - config_distro_ignore
-  - config_update
-  - config_update_ui
-  - config_normalizer
-  - config_perms
   - toolbar
   - admin_toolbar
-  - adminimal_admin_toolbar
-themes:
-  - adminimal_theme
-  - vdo_install
+  - admin_toolbar_tools
+  - admin_toolbar_links_access_filter

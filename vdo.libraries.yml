@@ -1,0 +1,13 @@
+install-page:
+  js:
+    themes/vdo/js/mobile.install.js: {}
+  css:
+    theme:
+      themes/vdo/css/theme/install-page.css: {}
+  dependencies:
+    - system/maintenance
+
+toolbar-icon:
+  css:
+    theme:
+      themes/vdo/css/theme/admin-toolbar-tools.css: {}
