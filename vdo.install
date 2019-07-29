@@ -5,7 +5,7 @@
  * Install, update and uninstall functions for the vdo installation profile.
  */
 
-use Drupal\user\Entity\User;
+use Drupal\vdo\Entity\VdoEntityDefinitionUpdateManager;
 
 /**
  * Implements hook_install().
@@ -27,14 +27,15 @@ function vdo_install() {
 
   // Enable the admin theme.
   \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
-  
-  // Assign user 1 the "administrator" role.
-  $user = User::load(1);
-  $user->roles[] = 'administrator';
-  $user->save();
 
   // We install some menu links, so we have to rebuild the router, to ensure the
   // menu links are valid.
   \Drupal::service('router.builder')->rebuildIfNeeded();
+
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(VdoEntityDefinitionUpdateManager::class)
+    ->applyUpdates();
 
 }
