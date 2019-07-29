@@ -47,6 +47,7 @@ body .site-version {
   float: left;
   margin-left: 15px;
   margin-top: 18px;
+  color: #FFFFFF;
 }
 
 body body .layout-container,
@@ -106,4 +107,107 @@ body .js .layout-container,
     background-size: 15%;
     background-position: 95% 5%;
   }
+}
+
+.install-header,
+.install-card {
+  background: #358FC8;
+  background-color: #358FC8 !important;
+}
+
+/**
+ * Task list & step indicator
+ */
+@media all and (max-width: 48em) { /* 768px */
+
+  .step-indicator {
+    position: absolute;
+    top: 0.2em;
+    right: 0.5em; /* LTR */
+    display: block;
+    font-size: 1.385em;
+  }
+
+  .task-list {
+    display: none;
+  }
+}
+
+@media all and (min-width: 48em) { /* 768px */
+  .step-indicator {
+    display: none;
+  }
+
+  .task-list {
+    margin-left: 0;
+    padding-bottom: 1em;
+    padding-left: 0; 
+    list-style-type: none;
+  }
+
+  .task-list li {
+    padding: 0.5em;
+    color: #ffffff;
+  }
+
+  .task-list .is-active {
+    position: relative;
+    background: #358FC8;
+    font-weight: normal;
+  }
+  .task-list .is-active:after {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    margin-top: -1.269em;
+    content: " ";
+    pointer-events: none;
+    border: solid transparent;
+    border-width: 1.269em;
+    border-color: #358FC8;
+    border-left-color: #358FC8;
+  }
+  .task-list .done {
+    color: #358FC8;
+  }
+}
+
+/**
+ * Layout
+ */
+.layout-container {
+  width: auto;
+  margin-right: 1.25em;
+  margin-left: 1.25em;
+  background: #fff;
+}
+
+.layout-container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.page-title {
+  color: #358FC8;
+} 
+
+/**
+ * Status report customization for install and update page.
+ */
+.system-status-report__status-title {
+  float: none;
+  width: 100%;
+}
+.system-status-report__entry__value {
+  float: none;
+  width: 100%;
+  padding-top: 0;
+  padding-left: 3em; /* LTR */
+}
+[dir="rtl"] .system-status-report__entry__value {
+  padding-right: 3em;
+  padding-left: 1em;
 }
