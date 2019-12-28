@@ -31,6 +31,8 @@
     "cweagans/composer-patches": "@stable",
     "drupal/core-composer-scaffold": "@stable",
     "drupal/core-recommended": "@stable",
+    "drupal/console": "^1.0",
+    "drush/drush": "^9.0",
     "drupal/admin_toolbar": "@stable",
     "drupal/uikit_admin": "@stable"
   },
