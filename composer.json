@@ -32,34 +32,11 @@
     "drupal/core-composer-scaffold": "@stable",
     "drupal/core-recommended": "@stable",
     "drupal/admin_toolbar": "@stable",
-    "drupal/uikit": "@stable",
     "drupal/uikit_admin": "@stable"
-  },
-  "require-dev": {
-    "drush/drush": "@stable",
-    "drupal/coder": "@stable",
-    "drupal/drupal-extension": "@stable",
-    "phing/phing": "@stable",
-    "behat/behat": "@stable",
-    "behat/mink": "@stable",
-    "behat/mink-extension": "@stable",
-    "behat/mink-goutte-driver": "@stable",
-    "behat/mink-zombie-driver": "@stable",
-    "behat/mink-selenium2-driver": "@stable",
-    "behatch/contexts": "@stable",
-    "emuse/behat-html-formatter": "@stable"
   },
   "config": {
     "bin-dir": "bin/",
     "secure-http": false
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "./bin/phing push"
-    ],
-    "post-update-cmd": [
-      "./bin/phing push"
-    ]
   },
   "extra": {
     "drupal-scaffold": {
