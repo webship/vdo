@@ -29,7 +29,7 @@
   "require": {
     "composer/installers": "@stable",
     "cweagans/composer-patches": "@stable",
-    "drupal-composer/drupal-scaffold": "@stable",
+    "drupal/core-composer-scaffold": "@stable",
     "webflo/drupal-finder": "@stable",
     "webmozart/path-util": "@stable",
     "drupal/core": "@stable",
