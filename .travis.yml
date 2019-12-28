@@ -13,7 +13,6 @@ php:
   - 7.1
   - 7.2
   - 7.3
-  - 7.4
 
 mysql:
   database: test_vdo
@@ -93,7 +92,7 @@ before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
 script:
-  - cd ./profiles/vdo
+  - cd /home/travis/build/webship/vdo/web/profiles/vdo/
   - ../../../bin/behat tests/features/vdo/
 
 matrix:

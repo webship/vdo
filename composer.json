@@ -20,10 +20,6 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-      },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
     }
   },
   "require": {
@@ -31,8 +27,8 @@
     "cweagans/composer-patches": "@stable",
     "drupal/core-composer-scaffold": "@stable",
     "drupal/core-recommended": "@stable",
-    "drupal/console": "^1.0",
-    "drush/drush": "^9.0",
+    "drupal/console": "@stable",
+    "drush/drush": "@stable",
     "drupal/admin_toolbar": "@stable",
     "drupal/uikit_admin": "@stable"
   },
