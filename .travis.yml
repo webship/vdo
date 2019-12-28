@@ -10,9 +10,9 @@ cache:
     - "$HOME/.selenium/cache"
 
 php:
-  - 7.1
   - 7.2
   - 7.3
+  - 7.4
 
 mysql:
   database: test_vdo
@@ -32,16 +32,16 @@ before_install:
   - mysql -e "SHOW VARIABLES LIKE 'wait_timeout'"
 
   # PHP Configurations.
-  - echo 'max_execution_time = 1200' >> varbase.php.ini;
-  - echo 'max_input_time = 180' >> varbase.php.ini;
-  - echo 'max_input_vars = 10000' >> varbase.php.ini;
-  - echo 'memory_limit = 2000M' >> varbase.php.ini;
-  - echo 'error_reporting = E_ALL' >> varbase.php.ini;
-  - echo 'post_max_size = 64M' >> varbase.php.ini;
-  - echo 'upload_max_filesize = 32M' >> varbase.php.ini;
-  - echo 'max_file_uploads = 40' >> varbase.php.ini;
-  - echo 'sendmail_path = /bin/true' >> varbase.php.ini;
-  - phpenv config-add varbase.php.ini
+  - echo 'max_execution_time = 1200' >> vdo.php.ini;
+  - echo 'max_input_time = 180' >> vdo.php.ini;
+  - echo 'max_input_vars = 10000' >> vdo.php.ini;
+  - echo 'memory_limit = 2000M' >> vdo.php.ini;
+  - echo 'error_reporting = E_ALL' >> vdo.php.ini;
+  - echo 'post_max_size = 64M' >> vdo.php.ini;
+  - echo 'upload_max_filesize = 32M' >> vdo.php.ini;
+  - echo 'max_file_uploads = 40' >> vdo.php.ini;
+  - echo 'sendmail_path = /bin/true' >> vdo.php.ini;
+  - phpenv config-add vdo.php.ini
   - phpenv rehash
 
   # Configure and run the virtual display.
@@ -50,18 +50,22 @@ before_install:
   - Xvfb :99 -ac -screen 0 1366x768x24 &>/dev/null &
   - sleep 3
 
-  # Download Chrome Driver.
-  - LATEST_CHROMEDRIVER=$(wget -q -O - http://chromedriver.storage.googleapis.com/LATEST_RELEASE)
-  - wget http://chromedriver.storage.googleapis.com/$LATEST_CHROMEDRIVER/chromedriver_linux64.zip
+  # Download Latest Chrome Driver.
+  - CHROME_DRIVER_VERSION=$(wget -qO- chromedriver.storage.googleapis.com/LATEST_RELEASE);
+  - echo $CHROME_DRIVER_VERSION;
+  - wget http://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
   - unzip chromedriver_linux64.zip
   - chmod +x chromedriver
   - mkdir -p $HOME/.composer/vendor/bin
   - mv -f chromedriver $HOME/.composer/vendor/bin/
   - rm chromedriver_linux64.zip
 
-  # Update Chrome.
+  # Update to latest Chrome browser.
   - export CHROME_BIN=/usr/bin/google-chrome
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  - sudo apt-get clean
+  - sudo apt-get update
+  - sudo apt-get install dpkg
   - sudo dpkg -i google-chrome-stable_current_amd64.deb
   - rm google-chrome-stable_current_amd64.deb
   - google-chrome --version
@@ -87,7 +91,7 @@ before_script:
   - drush runserver --default-server=builtin 8080 &>/dev/null &
   - sleep 5
 script:
-  - cd ./profiles/vdo
+  - cd ./profiles/contrib/vdo
   - behat --strict tests/features/vdo
 
 matrix:

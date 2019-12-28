@@ -30,7 +30,7 @@
     "composer/installers": "@stable",
     "cweagans/composer-patches": "@stable",
     "drupal/core-composer-scaffold": "@stable",
-    "drupal/core": "@stable",
+    "drupal/core-recommended": "@stable",
     "drupal/admin_toolbar": "@stable",
     "drupal/uikit": "@stable",
     "drupal/uikit_admin": "@stable"
@@ -54,9 +54,7 @@
     "secure-http": false
   },
   "scripts": {
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
     "post-install-cmd": [
-      "@composer drupal-scaffold",
       "./bin/phing push"
     ],
     "post-update-cmd": [
@@ -67,23 +65,15 @@
     "branch-alias": {
       "dev-8.x-1.x": "8.1.x-dev"
     },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
     "installer-paths": {
-      "web/core": ["drupal/core"],
-      "web/profiles/{$name}": ["type:drupal-profile"],
-      "web/modules/contrib/{$name}": ["type:drupal-module"],
-      "web/themes/contrib/{$name}": ["type:drupal-theme"],
-      "web/libraries/{$name}": [
-          "type:drupal-library",
-          "type:bower-asset",
-          "type:npm-asset"
-      ],
-      "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-      "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
-      "drush/contrib/{$name}": ["type:drupal-drush"]
+        "web/core": ["type:drupal-core"],
+        "web/libraries/{$name}": ["type:drupal-library"],
+        "web/modules/contrib/{$name}": ["type:drupal-module"],
+        "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+        "web/themes/contrib/{$name}": ["type:drupal-theme"],
+        "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+        "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+        "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
     },
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
