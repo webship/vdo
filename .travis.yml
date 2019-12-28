@@ -10,9 +10,9 @@ cache:
     - "$HOME/.selenium/cache"
 
 php:
+  - 7.1
   - 7.2
   - 7.3
-  - 7.4
 
 mysql:
   database: test_vdo
