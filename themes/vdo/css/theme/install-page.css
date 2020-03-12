@@ -8,10 +8,10 @@ body.install-page {
   background-image: url(../../logo-wight.svg);
   background-position: center center;
   background-repeat: no-repeat;
-  -webkit-background-size: 15%;
-  -moz-background-size: 15%;
-  -o-background-size: 15%;
-  background-size: 15%;
+  -webkit-background-size: 22%;
+  -moz-background-size: 22%;
+  -o-background-size: 22%;
+  background-size: 22%;
   background-position: 95% 5%;
   -webkit-animation: logo-animation 40s infinite;
   animation: logo-animation 40s infinite;
@@ -19,21 +19,23 @@ body.install-page {
 }
 
 body .install-logo {
-  width: 150px;
+  width: 100px;
   float: left;
+}
+
+body .page-title {
+  width: 100%;  
 }
 
 body .install-site-name,
 body .site-version {
-  float: left;
-  margin-left: 15px;
-  margin-top: 18px;
-  color: #FFFFFF;
+  margin-left: 60px;
+  margin-top: 1em;
 }
 
 @keyframes logo-animation {
   10% {
-    background-size: 15%;
+    background-size: 22%;
     background-position: 95% 5%;
   }
   20% {
@@ -41,15 +43,15 @@ body .site-version {
     background-position: 50%;
   }
   30% {
-    background-size: 15%;
+    background-size: 22%;
     background-position: 5% 95%;
   }
   40% {
-    background-size: 50%;
+    background-size: 22%;
     background-position: 50%;
   }
   50% {
-    background-size: 15%;
+    background-size: 22%;
     background-position: 95% 5%;
   }
   60% {
@@ -57,7 +59,7 @@ body .site-version {
     background-position: 50%;
   }
   70% {
-    background-size: 15%;
+    background-size: 22%;
     background-position: 5% 95%;
   }
   80% {
@@ -65,7 +67,7 @@ body .site-version {
     background-position: 50%;
   }
   90% {
-    background-size: 15%;
+    background-size: 22%;
     background-position: 95% 5%;
   }
 }
