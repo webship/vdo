@@ -4,11 +4,40 @@ namespace Drupal\vdo\Form;
 
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class ProductForm.
  */
 class ProductForm extends EntityForm {
+
+  /**
+   * The Messenger service.
+   *
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+
+  /**
+   * Constructor.
+   *
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+   *   The messenger service.
+   */
+  public function __construct(MessengerInterface $messenger) {
+    $this->messenger = $messenger;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('messenger')
+    );
+  }
+  
 
   /**
    * {@inheritdoc}
@@ -49,13 +78,13 @@ class ProductForm extends EntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Product.', [
+        $this->messenger->addMessage($this->t('Created the %label Product.', [
           '%label' => $product->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Product.', [
+        $this->messenger->addMessage($this->t('Saved the %label Product.', [
           '%label' => $product->label(),
         ]));
     }

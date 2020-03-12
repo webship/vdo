@@ -1,7 +1,7 @@
 name: VDO
 type: profile
 description: 'VDO Visual do helps Drupal 8 developers manage base code development work cycle for custom distributions/profiles.'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 version: 8.x-1.x-dev
 package: VDO
 project: vdo
@@ -10,8 +10,7 @@ distribution:
   install:
     theme: vdo
 themes:
-  - uikit
-  - uikit_admin
+  - claro
   - vdo
 install:
   - system
@@ -26,6 +25,3 @@ install:
   - menu_ui
   - config
   - toolbar
-  - admin_toolbar
-  - admin_toolbar_tools
-  - admin_toolbar_links_access_filter

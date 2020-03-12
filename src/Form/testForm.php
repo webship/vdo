@@ -4,11 +4,39 @@ namespace Drupal\vdo\Form;
 
 use Drupal\Core\Entity\EntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class testForm.
  */
 class testForm extends EntityForm {
+
+  /**
+   * The Messenger service.
+   *
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+
+  /**
+   * Constructor.
+   *
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
+   *   The messenger service.
+   */
+  public function __construct(MessengerInterface $messenger) {
+    $this->messenger = $messenger;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('messenger')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -49,13 +77,13 @@ class testForm extends EntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Test.', [
+        $this->messenger->addMessage($this->t('Created the %label Test.', [
           '%label' => $test->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Test.', [
+        $this->messenger->addMessage($this->t('Saved the %label Test.', [
           '%label' => $test->label(),
         ]));
     }

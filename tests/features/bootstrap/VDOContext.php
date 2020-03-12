@@ -14,9 +14,9 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 class VDOContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   /**
-  * Hold all passed parameters.
-  */
-  protected $parameters = array();
+   * Hold all passed parameters.
+   */
+  protected $parameters = [];
 
   /**
    * Initializes context.
@@ -28,6 +28,9 @@ class VDOContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   }
 
+  /**
+   *
+   */
   public function cleanUsers() {
 
   }
@@ -40,4 +43,5 @@ class VDOContext extends RawDrupalContext implements SnippetAcceptingContext {
   public function maximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();
   }
+
 }
