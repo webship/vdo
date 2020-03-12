@@ -1,0 +1,5 @@
+# Schema for the configuration files of the VDO theme.
+
+vdo.settings:
+  type: theme_settings
+  label: 'VDO theme settings'
