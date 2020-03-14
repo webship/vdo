@@ -38,7 +38,6 @@ class DevDeleteForm extends EntityConfirmFormBase {
       $container->get('messenger')
     );
   }
-  
 
   /**
    * {@inheritdoc}

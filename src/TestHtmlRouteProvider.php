@@ -4,7 +4,6 @@ namespace Drupal\vdo;
 
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\Routing\AdminHtmlRouteProvider;
-use Symfony\Component\Routing\Route;
 
 /**
  * Provides routes for Test entities.
@@ -12,7 +11,7 @@ use Symfony\Component\Routing\Route;
  * @see Drupal\Core\Entity\Routing\AdminHtmlRouteProvider
  * @see Drupal\Core\Entity\Routing\DefaultHtmlRouteProvider
  */
-class testHtmlRouteProvider extends AdminHtmlRouteProvider {
+class TestHtmlRouteProvider extends AdminHtmlRouteProvider {
 
   /**
    * {@inheritdoc}
@@ -21,7 +20,6 @@ class testHtmlRouteProvider extends AdminHtmlRouteProvider {
     $collection = parent::getRoutes($entity_type);
 
     // Provide your custom entity routes here.
-
     return $collection;
   }
 

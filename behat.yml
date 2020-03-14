@@ -6,7 +6,7 @@ default:
       paths:
         - %paths.base%/tests/features
       contexts:
-        - VDOContext:
+        - VdoContext:
             parameters: { }
         - Drupal\DrupalExtension\Context\DrupalContext
         - Drupal\DrupalExtension\Context\DrushContext

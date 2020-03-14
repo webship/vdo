@@ -37,7 +37,6 @@ class ProductForm extends EntityForm {
       $container->get('messenger')
     );
   }
-  
 
   /**
    * {@inheritdoc}

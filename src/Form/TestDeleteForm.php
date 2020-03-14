@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Builds the form to delete Test entities.
  */
-class testDeleteForm extends EntityConfirmFormBase {
+class TestDeleteForm extends EntityConfirmFormBase {
 
   /**
    * The Messenger service.

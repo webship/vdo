@@ -37,7 +37,7 @@ class DemoForm extends EntityForm {
       $container->get('messenger')
     );
   }
-  
+
   /**
    * {@inheritdoc}
    */

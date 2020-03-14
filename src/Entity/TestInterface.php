@@ -7,7 +7,7 @@ use Drupal\Core\Config\Entity\ConfigEntityInterface;
 /**
  * Provides an interface for defining Test entities.
  */
-interface testInterface extends ConfigEntityInterface {
+interface TestInterface extends ConfigEntityInterface {
 
   // Add get/set methods for your configuration properties here.
 }

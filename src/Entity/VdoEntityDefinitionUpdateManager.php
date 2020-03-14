@@ -68,29 +68,29 @@ final class VdoEntityDefinitionUpdateManager implements ContainerInjectionInterf
    *
    * @param \Drupal\Core\Entity\EntityDefinitionUpdateManagerInterface $entity_definition_update_manager
    *   The entity definition update manager.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
-   *   The entity type manager service.
    * @param \Drupal\Core\Entity\EntityLastInstalledSchemaRepositoryInterface $entity_last_installed_schema_repository
    *   The last installed schema repository service.
-   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
-   *   The entity field manager service.
    * @param \Drupal\Core\Entity\EntityTypeListenerInterface $entity_type_listener
    *   The entity type listener interface.
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager service.
+   * @param \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager
+   *   The entity field manager service.
    * @param \Drupal\Core\Field\FieldStorageDefinitionListenerInterface $field_storage_definition_listener
    *   The field storage definition listener service.
    */
   public function __construct(
     EntityDefinitionUpdateManagerInterface $entity_definition_update_manager,
     EntityLastInstalledSchemaRepositoryInterface $entity_last_installed_schema_repository,
-    EntityTypeManagerInterface $entity_type_manager,
     EntityTypeListenerInterface $entity_type_listener,
+    EntityTypeManagerInterface $entity_type_manager,
     EntityFieldManagerInterface $entity_field_manager,
     FieldStorageDefinitionListenerInterface $field_storage_definition_listener
   ) {
     $this->entityDefinitionUpdateManager = $entity_definition_update_manager;
     $this->entityLastInstalledSchemaRepository = $entity_last_installed_schema_repository;
-    $this->entityTypeManager = $entity_type_manager;
     $this->entityTypeListener = $entity_type_listener;
+    $this->entityTypeManager = $entity_type_manager;
     $this->entityFieldManager = $entity_field_manager;
     $this->fieldStorageDefinitionListener = $field_storage_definition_listener;
   }
@@ -99,12 +99,11 @@ final class VdoEntityDefinitionUpdateManager implements ContainerInjectionInterf
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    /** @noinspection PhpParamsInspection */
     return new static(
       $container->get('entity.definition_update_manager'),
       $container->get('entity.last_installed_schema.repository'),
-      $container->get('entity_type.manager'),
       $container->get('entity_type.listener'),
+      $container->get('entity_type.manager'),
       $container->get('entity_field.manager'),
       $container->get('field_storage_definition.listener')
     );

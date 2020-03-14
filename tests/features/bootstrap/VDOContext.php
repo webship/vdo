@@ -2,8 +2,10 @@
 
 /**
  * @file
- * Contains \VDOContext.
+ * Contains \VdoContext.
  */
+
+namespace Drupal\vdo\VdoContext;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
@@ -11,15 +13,20 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 /**
  * Defines application features from the specific context.
  */
-class VDOContext extends RawDrupalContext implements SnippetAcceptingContext {
+class VdoContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   /**
    * Hold all passed parameters.
+   *
+   * @var array
    */
   protected $parameters = [];
 
   /**
    * Initializes context.
+   *
+   * @param array $parameters
+   *   The parameters.
    */
   public function __construct(array $parameters) {
 
@@ -29,7 +36,7 @@ class VDOContext extends RawDrupalContext implements SnippetAcceptingContext {
   }
 
   /**
-   *
+   * Clean users.
    */
   public function cleanUsers() {
 
@@ -40,7 +47,7 @@ class VDOContext extends RawDrupalContext implements SnippetAcceptingContext {
    *
    * @BeforeScenario @javascript
    */
-  public function maximizeWindow() {
+  public function beforeScenarioMaximizeWindow() {
     $this->getSession()->getDriver()->maximizeWindow();
   }
 

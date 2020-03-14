@@ -8,7 +8,7 @@ use Drupal\Core\Entity\EntityInterface;
 /**
  * Provides a listing of Test entities.
  */
-class testListBuilder extends ConfigEntityListBuilder {
+class TestListBuilder extends ConfigEntityListBuilder {
 
   /**
    * {@inheritdoc}

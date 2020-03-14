@@ -14,7 +14,9 @@ The Visual Distribution Operator (VDO) management system helps
 After that you can create the project:
 
 ```
-composer create-project webship/vdo-project:8.1.x-dev /var/www/html --stability dev --no-interaction
+composer create-project webship/vdo-project:8.1.x-dev /var/www/html
+
+ --stability dev --no-interaction
 ```
 
 ## Constructing your Linux development computer or servers with:

@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * Class testForm.
  */
-class testForm extends EntityForm {
+class TestForm extends EntityForm {
 
   /**
    * The Messenger service.
@@ -58,7 +58,7 @@ class testForm extends EntityForm {
       '#type' => 'machine_name',
       '#default_value' => $test->id(),
       '#machine_name' => [
-        'exists' => '\Drupal\vdo\Entity\test::load',
+        'exists' => '\Drupal\vdo\Entity\Test::load',
       ],
       '#disabled' => !$test->isNew(),
     ];

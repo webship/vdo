@@ -12,14 +12,14 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   label = @Translation("Tests"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\vdo\testListBuilder",
+ *     "list_builder" = "Drupal\vdo\TestListBuilder",
  *     "form" = {
- *       "add" = "Drupal\vdo\Form\testForm",
- *       "edit" = "Drupal\vdo\Form\testForm",
- *       "delete" = "Drupal\vdo\Form\testDeleteForm"
+ *       "add" = "Drupal\vdo\Form\TestForm",
+ *       "edit" = "Drupal\vdo\Form\TestForm",
+ *       "delete" = "Drupal\vdo\Form\TestDeleteForm"
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\vdo\testHtmlRouteProvider",
+ *       "html" = "Drupal\vdo\TestHtmlRouteProvider",
  *     },
  *   },
  *   config_prefix = "test",
@@ -43,7 +43,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   }
  * )
  */
-class test extends ConfigEntityBase implements testInterface {
+class Test extends ConfigEntityBase implements testInterface {
 
   /**
    * The Test ID.
