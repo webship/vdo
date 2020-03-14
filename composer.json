@@ -32,7 +32,8 @@
     "drupal/core-dev": "^8.8.0",
     "drupal/console": "^1.0",
     "drush/drush": "^9.0",
-    "behat/behat": "~3.0"
+    "behat/behat": "~3.0",
+    "behat/mink": "~1.0"
   },
   "conflict": {
     "drupal/drupal": "*"
