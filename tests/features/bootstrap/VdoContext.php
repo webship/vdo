@@ -5,8 +5,6 @@
  * Contains \VdoContext.
  */
 
-namespace Drupal\vdo\VdoContext;
-
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
 
