@@ -43,7 +43,7 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *   }
  * )
  */
-class Test extends ConfigEntityBase implements testInterface {
+class Test extends ConfigEntityBase implements TestInterface {
 
   /**
    * The Test ID.

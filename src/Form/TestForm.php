@@ -8,7 +8,7 @@ use Drupal\Core\Messenger\MessengerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Class testForm.
+ * Class TestForm.
  */
 class TestForm extends EntityForm {
 
