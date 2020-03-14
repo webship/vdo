@@ -13,13 +13,19 @@ default:
         - Drupal\DrupalExtension\Context\MessageContext
         - Drupal\DrupalExtension\Context\MinkContext
         - Drupal\DrupalExtension\Context\MarkupContext
+        - Drupal\DrupalExtension\Context\BatchContext
       paths:
         features: %paths.base%/tests/features
         bootstrap: %paths.base%/tests/features/bootstrap
+  formatters:
+    pretty:
+    html:
+      output_path: "%paths.base%/tests/reports/"
   extensions:
     Behat\MinkExtension:
       files_path: "%paths.base%/tests/assets/"
       goutte: ~
+      zombie: ~
       selenium2:
         wd_host: 127.0.0.1:4445/wd/hub
         capabilities:
@@ -35,3 +41,11 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
+    Behatch\Extension: ~
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: false
+      print_outp: false
+      loop_break: false
