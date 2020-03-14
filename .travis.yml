@@ -79,7 +79,7 @@ install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - cp -R /home/travis/build/webship/vdo /home/travis/build/webship/vdo-profile
-  - composer install --no-interaction --vvv
+  - composer install --no-interaction -vvv
   - mkdir /home/travis/build/webship/vdo/web/profiles/contrib
   - mv /home/travis/build/webship/vdo-profile /home/travis/build/webship/vdo/web/profiles/contrib/vdo
 
