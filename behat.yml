@@ -15,10 +15,6 @@ default:
       paths:
         features: %paths.base%/tests/features
         bootstrap: %paths.base%/tests/features/bootstrap
-  formatters:
-    pretty:
-    html:
-      output_path: "%paths.base%/tests/reports/"
   extensions:
     Behat\MinkExtension:
       files_path: "%paths.base%/tests/assets/"
