@@ -79,12 +79,13 @@ install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - cp -R /home/travis/build/webship/vdo /home/travis/build/webship/vdo-profile
-  - composer install --no-interaction
+  - composer install --no-interaction --vvv
+  - mkdir /home/travis/build/webship/vdo/web/profiles/contrib
   - mv /home/travis/build/webship/vdo-profile /home/travis/build/webship/vdo/web/profiles/contrib/vdo
 
   ## Install with drush.
   - cd web
-  - drush site-install vdo --yes --site-name='VDO' --account-name=admin --account-pass=dD.123123ddd --account-mail=vdo@webship.org --db-url="mysql://root:@localhost/test_vdo" 
+  - drush site-install vdo --yes --site-name='VDO' --account-name=admin --account-pass=dD.123123ddd --account-mail=admin@webship.org --db-url="mysql://root:@localhost/test_vdo" 
   - drush config-set system.performance css.preprocess 0 --yes
   - drush config-set system.performance js.preprocess 0 --yes
   - drush config-set system.logging error_level all --yes
