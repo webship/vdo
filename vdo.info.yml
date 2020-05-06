@@ -25,3 +25,5 @@ install:
   - menu_ui
   - config
   - toolbar
+  - behat_ui
+  - ace_editor
