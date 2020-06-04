@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/webship/vdo.svg?branch=8.x-1.x)](https://travis-ci.org/webship/vdo)
+[![Build Status](https://travis-ci.org/webship/vdo.svg?branch=9.0.x)](https://travis-ci.org/webship/vdo)
 # VDO
 
-The Visual Distribution Operator (VDO) management system helps
- Drupal 8 distribution maintainers manage the base code and logic for the
+The Visual Distribution Operator (VDO) management system helps distribution
+ maintainers manage the base code and logic for the
  work cycle of development with number of workspaces for custom profiles,
  sub-profiles on local development machines or servers.
 [![VDO](https://www.drupal.org/files/project-images/VDO-logo.png)](https://www.drupal.org/project/vdo)
@@ -14,9 +14,7 @@ The Visual Distribution Operator (VDO) management system helps
 After that you can create the project:
 
 ```
-composer create-project webship/vdo-project:8.1.x-dev /var/www/html
-
- --stability dev --no-interaction
+composer create-project webship/vdo-project:9.0.x-dev /var/www/html --stability dev --no-interaction
 ```
 
 ## Constructing your Linux development computer or servers with:
