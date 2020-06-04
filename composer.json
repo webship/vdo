@@ -32,10 +32,10 @@
     }
   },
   "require": {
-    "composer/installers": "^1.2",
+    "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
-    "drupal/core": "^9",
+    "drupal/core-recommended": "^9",
     "npm-asset/ace-builds": "~1.0",
     "drupal/ace_editor": "~1.0",
     "drupal/webtest": "^8.1"
