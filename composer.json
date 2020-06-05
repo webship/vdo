@@ -18,8 +18,8 @@
     }
   ],
   "support": {
-  "issues": "http://drupal.org/project/issues/vdo",
-  "source": "http://cgit.drupalcode.org/vdo"
+    "issues": "http://drupal.org/project/issues/vdo",
+    "source": "http://cgit.drupalcode.org/vdo"
   },
   "repositories": {
     "drupal": {
@@ -38,7 +38,7 @@
     "drupal/core-recommended": "^9",
     "npm-asset/ace-builds": "@stable",
     "drupal/ace_editor": "@stable",
-    "drupal/webtest": "@stable"
+    "drupal/webtest": "2.*@stable"
   },
   "conflict": {
     "drupal/drupal": "*"
