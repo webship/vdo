@@ -36,9 +36,9 @@
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
     "drupal/core-recommended": "^9",
-    "npm-asset/ace-builds": "~1.0",
-    "drupal/ace_editor": "~1.0",
-    "drupal/webtest": "^8.1"
+    "npm-asset/ace-builds": "@stable",
+    "drupal/ace_editor": "@stable",
+    "drupal/webtest": "@stable"
   },
   "conflict": {
     "drupal/drupal": "*"
