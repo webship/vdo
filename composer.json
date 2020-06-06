@@ -35,7 +35,7 @@
     "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^9",
     "drupal/core-project-message": "^9",
-    "drupal/core": "^9",
+    "drupal/core-recommended": "^9",
     "npm-asset/ace-builds": "@stable",
     "drupal/ace_editor": "@stable",
     "drupal/webtest": "2.*@stable"
