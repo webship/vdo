@@ -39,9 +39,10 @@
     "drupal/drupal-library-installer-plugin": "^0.3",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.0",
+    "drupal/webtest": "~2.0",
+    "drupal/vartheme_claro": "~2.0",
     "npm-asset/ace-builds": "~1.0",
-    "drupal/ace_editor": "~1.0",
-    "drupal/webtest": "~2.0"
+    "drupal/ace_editor": "~1.0"
   },
   "conflict": {
     "drupal/drupal": "*"

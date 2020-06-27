@@ -1,7 +1,12 @@
 install-page:
   css:
     theme:
-      themes/vdo/css/theme/install-page.css: { }
+      css/theme/install-page.css: { }
   dependencies:
     - system/maintenance
     - claro/install-page
+
+toolbar-icon:
+  css:
+    theme:
+      css/theme/admin-toolbar-tools.css: {}

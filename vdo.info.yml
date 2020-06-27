@@ -8,10 +8,10 @@ project: vdo
 distribution:
   name: VDO
   install:
-    theme: vdo
+    theme: vartheme_claro
 themes:
   - claro
-  - vdo
+  - vartheme_claro
 install:
   - system
   - action
