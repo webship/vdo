@@ -32,13 +32,16 @@
     }
   },
   "require": {
-    "composer/installers": "^1.9",
-    "drupal/core-composer-scaffold": "^9",
-    "drupal/core-project-message": "^9",
-    "drupal/core": "^9",
-    "npm-asset/ace-builds": "@stable",
-    "drupal/ace_editor": "@stable",
-    "drupal/webtest": "2.*@stable"
+    "composer/installers": "~1.0",
+    "oomphinc/composer-installers-extender": "~1.0",
+    "drupal/core-composer-scaffold": "~9.0",
+    "drupal/core-project-message": "~9.0",
+    "drupal/drupal-library-installer-plugin": "^0.3",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/core": "~9.0",
+    "npm-asset/ace-builds": "~1.0",
+    "drupal/ace_editor": "~1.0",
+    "drupal/webtest": "~2.0"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -47,16 +50,15 @@
   "prefer-stable": true,
   "config": {
     "bin-dir": "bin/",
-    "secure-http": false
+    "secure-http": false,
+    "process-timeout": 1800,
+    "vendor-dir": "web/vendor"
   },
   "extra": {
     "drupal-scaffold": {
       "locations": {
         "web-root": "web/"
       }
-    },
-    "branch-alias": {
-      "dev-9.0.x": "9.0.x-dev"
     },
     "installer-types": [
       "bower-asset",
@@ -82,6 +84,11 @@
       "libraries": [
         {"name": "ace", "package": "npm-asset/ace-builds"}
       ]
+    },
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
     }
   }
 }
