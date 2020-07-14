@@ -14,30 +14,30 @@ html body .claro-details,
 html body .claro-details__summary,
 html body .form-item__description,
 html body .task-list li {
-  color: #437100;
+  color: #328ec7;
 }
 
 html body .task-list .is-active,
 html body .button--primary,
 html body .claro-details__summary:hover {
-  background: #437100;
+  background: #328ec7;
   color: #ffffff;
 }
 
 html body .button--primary:hover,
 html body .button--primary:focus,
 html body .button--primary:active {
-  background: #2c4b00;
+  background: #328ec7;
 }
 
 html body .task-list .is-active:after {
-  border-left-color: #437100;
+  border-left-color: #328ec7;
 }
 
 html body.install-page {
-  background: #437100 !important;
-  background-color: #437100 !important;
-  background-image: url(../../logo-wight.svg) !important;
+  background: #328ec7 !important;
+  background-color: #328ec7 !important;
+  background-image: url(../../images/logo-wight.svg) !important;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-background-size: 22%;
@@ -118,7 +118,7 @@ html body footer.installer-footer #credit {
 }
 
 html body .progress__bar {
-  border: 1px #437100 solid ;
-  background: #437100;
+  border: 1px #328ec7 solid ;
+  background: #328ec7;
   height: 1.5em;
 }
