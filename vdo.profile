@@ -27,4 +27,3 @@ function vdo_preprocess_install_page(&$variables) {
 function vdo_toolbar_alter(&$items) {
   $items['admin_toolbar_tools']['#attached']['library'][] = 'vdo/toolbar-icon';
 }
-
