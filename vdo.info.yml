@@ -13,16 +13,44 @@ themes:
   - claro
   - vartheme_claro
 install:
-  - system
-  - action
-  - syslog
-  - dblog
-  - help
-  - block
-  - user
-  - views
-  - views_ui
-  - menu_ui
   - config
-  - toolbar
+  - user
+  - tracker
+  - node
+  - comment
+  - taxonomy
+  - block
+  - menu_link_content
+  - menu_ui
+  - help
+  - action
+  - dynamic_page_cache
+  - page_cache
+  - automated_cron
+  - color
+  - field
+  - field_ui
+  - file
+  - image
+  - text
+  - datetime
+  - options
+  - contextual
+  - editor
+  - filter
+  - path
+  - search
+  - shortcut
+  - views
+  - datetime_range
+  - layout_discovery
+  - field_layout
+  - statistics
+  - syslog
+  - update
+  - history
+## Contrib Modules
+  - webdev
+  - webadmin
+  - behat_ui
   - ace_editor

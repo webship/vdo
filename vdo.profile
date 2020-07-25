@@ -20,3 +20,11 @@ function vdo_preprocess_install_page(&$variables) {
   // VDO has custom styling for the install page.
   $variables['#attached']['library'][] = 'vdo/install-page';
 }
+
+/**
+ * Implements hook_toolbar_alter().
+ */
+function vdo_toolbar_alter(&$items) {
+  $items['admin_toolbar_tools']['#attached']['library'][] = 'vdo/toolbar-icon';
+}
+
