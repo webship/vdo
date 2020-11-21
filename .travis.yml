@@ -70,7 +70,7 @@ install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - composer install --no-interaction
-  - git checkout $TRAVIS_COMMIT web/profiles/contrib/vdo
+  - git clone --branch 9.0.x git@github.com:webship/vdo.git web/profiles/contrib/vdo
 
   ## Install with drush.
   - cd web
@@ -84,7 +84,7 @@ before_script:
   - sleep 5
 script:
   - cd profiles/contrib/vdo/
-  - ../../../../bin/behat tests/features/vdo/
+  - ../../../bin/behat tests/features/vdo/
 
 matrix:
   fast_finish: true
