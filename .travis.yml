@@ -70,7 +70,8 @@ install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - composer install --no-interaction
-  - git clone --branch 9.0.x git@github.com:webship/vdo.git web/profiles/contrib/vdo
+  - mkdir web/profiles/contrib
+  - git clone --branch 9.0.x https://github.com/webship/vdo.git web/profiles/contrib/vdo
 
   ## Install with drush.
   - cd web
