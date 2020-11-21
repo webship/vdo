@@ -70,6 +70,7 @@ install:
   - git checkout $TRAVIS_COMMIT
   ## Build with the composer.
   - composer install --no-interaction
+  - git checkout $TRAVIS_COMMIT web/profiles/contrib/vdo
 
   ## Install with drush.
   - cd web
