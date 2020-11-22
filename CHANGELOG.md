@@ -1,3 +1,8 @@
+# 9.0.0-alpha2
+
+* Issue [#3183876](https://www.drupal.org/i/3183876):
+        Fixed VDO composer and .info.yml to work with Drupal 9 ( ^9.0 ) only
+
 # 9.0.0-alpha1
 
 * Issue [#3118431](https://www.drupal.org/i/3118431):
