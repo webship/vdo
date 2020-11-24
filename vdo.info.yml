@@ -53,4 +53,3 @@ install:
   - webdev
   - webadmin
   - behat_ui
-  - ace_editor
