@@ -1,5 +1,5 @@
 # VDO
-[![Build Status](https://travis-ci.org/webship/vdo.svg?branch=9.0.0-alpha3)](https://travis-ci.com/github/webship/vdo/builds/203689889) VDO 9.0.0-alpha3
+[![Build Status](https://travis-ci.org/webship/vdo.svg?branch=9.0.0-alpha3)](https://travis-ci.com/github/webship/vdo/builds/203694978) VDO 9.0.0-alpha3
 
 The Visual Distribution Operator (VDO) management system helps distribution
  maintainers manage the base code and logic for the
