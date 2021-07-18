@@ -1,3 +1,22 @@
+# 9.0.0-alpha4
+
+* Issue [#3224151](https://www.drupal.org/i/3224151):
+        Changed to use minimal Drupal core modules and minimal admin styling with Claro admin theme
+* Added DEV builder for Vardoc 5.0.x
+        [#29](https://github.com/webship/vdo-project/issues/29)
+* Added the database connection that Drupal may use on install
+        [#30](https://github.com/webship/vdo-project/issues/30)
+* Added Varbase demo users command and Vardoc demo users custom if needed - cancel demo users
+        [#31](https://github.com/webship/vdo-project/issues/31)
+* Added setup for Ubuntu 21.04 with PHP7.4 and PHP8.0 options and MySQL8
+        [#32](https://github.com/webship/vdo-project/issues/32)
+* Changed the Varbase project and Varbase profile build with --install and --add-users commands
+        [#33](https://github.com/webship/vdo-project/issues/33)
+* Changed the Cucumber project build with --install and --add-users commands
+        [#34](https://github.com/webship/vdo-project/issues/34)
+* Changed Create a new database to use CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci by default
+        [#35](https://github.com/webship/vdo-project/issues/35)
+
 # 9.0.0-alpha3
 
 
