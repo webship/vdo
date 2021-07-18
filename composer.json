@@ -38,10 +38,7 @@
     "drupal/core-project-message": "~9.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.0",
-    "drupal/webdev": "~9.0",
-    "drupal/webadmin": "~9.0",
-    "drupal/behat_ui": "~4.0",
-    "drupal/vartheme_claro": "~2.0",
+    "drupal/core-dev": "~9.0",
     "drush/drush": "~10.0"
   },
   "conflict": {

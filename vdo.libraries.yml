@@ -2,11 +2,8 @@ install-page:
   css:
     theme:
       css/theme/install-page.css: { }
-  dependencies:
-    - system/maintenance
-    - claro/install-page
 
-toolbar-icon:
+toolbar-style:
   css:
     theme:
-      css/theme/admin-toolbar-tools.css: { }
+      css/theme/toolbar-style.css: { }

@@ -25,5 +25,5 @@ function vdo_preprocess_install_page(&$variables) {
  * Implements hook_toolbar_alter().
  */
 function vdo_toolbar_alter(&$items) {
-  $items['admin_toolbar_tools']['#attached']['library'][] = 'vdo/toolbar-icon';
+  $items['admin_toolbar_tools']['#attached']['library'][] = 'vdo/toolbar-style';
 }
