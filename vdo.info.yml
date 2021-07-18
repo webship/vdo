@@ -1,6 +1,6 @@
 name: VDO
 type: profile
-description: 'VDO Visual do helps Drupal developers manage base code development work cycle for custom distributions/profiles.'
+description: 'Helps Drupal developers manage base code development work cycle for custom distributions/profiles.'
 core_version_requirement: ^9.0
 version: 9.0.x-dev
 package: VDO
