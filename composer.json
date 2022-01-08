@@ -1,6 +1,6 @@
 {
   "name": "webship/vdo",
-  "description": "The Visual Distribution Operator (VDO) management system helps Drupal 8 distribution maintainers manage the base code and logic for the work cycle of development with number of workspaces for custom profiles, sub-profiles on local development machines or servers.",
+  "description": "The Visual Distribution Operator (VDO) management system helps developers manage the base code development work cycle for custom distributions. Constructing your Linux development computer or servers.",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
@@ -22,20 +22,19 @@
     "source": "http://cgit.drupalcode.org/vdo"
   },
   "repositories": {
-    "packagist": {
-      "type": "composer",
-      "url": "https://packagist.org"
-    },
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
   },
   "require": {
     "composer/installers": "~1.0 || ~2.0",
     "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "drupal/core-composer-scaffold": "~9.0",
-    "drupal/core-project-message": "~9.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.0",
     "drush/drush": "~10.0",
@@ -47,11 +46,16 @@
   "config": {
     "bin-dir": "bin/",
     "secure-http": false,
-    "process-timeout": 1800,
-    "vendor-dir": "web/vendor",
-    "github-protocols": [
-      "https,ssh"
-    ]
+    "optimize-autoloader": true,
+    "preferred-install": {
+      "drupal/core": "dist"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "oomphinc/composer-installers-extender": true,
+      "drupal/core-composer-scaffold": true
+    }
   },
   "extra": {
     "drupal-scaffold": {
