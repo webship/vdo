@@ -1,1 +1,0 @@
-# VDO Tests Assets

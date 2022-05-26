@@ -1,1 +1,0 @@
-# VDO Gherkin Features 

@@ -1,7 +1,7 @@
 # VDO
-[![Build Status](https://travis-ci.org/webship/vdo.svg?branch=9.0.0-alpha4)](https://travis-ci.com/github/webship/vdo/builds/233046847) VDO 9.0.0-alpha4
 
-Helps Drupal developers manage base code development work cycle for custom distributions/profiles.
+The Visual Distribution Operator (VDO) management system helps developers manage the base code development work cycle for custom distributions and starter kit templates. Constructing your Linux development computer or servers.
+
 [![VDO](https://raw.githubusercontent.com/webship/vdo/9.0.x/images/logo.svg)](https://www.drupal.org/project/vdo)
 
 
