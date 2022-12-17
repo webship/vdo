@@ -106,7 +106,7 @@ After Installing Ubuntu 21.04 for example you could run the following bash comma
 If you get the VDO bash files from
 
 ```
-git clone 9.0.x git@github.com:webship/vdo-project.git /var/www/html
+git clone 10.0.x git@github.com:webship/vdo-project.git /var/www/html
 cd /var/ww/html/
 sudo rm -rf .git
 ```
@@ -168,7 +168,7 @@ echo ${vdo_config}
 
 If "/var/www/html/vdo/config" was printed,which mean we are ready for the next step.
 
-Only for Ubuntu 21.04 you could run the follwoing command to setup your LAMP. ( You man install LAMP in your own. or copy the bash file change it to work for your system.)
+Only for Ubuntu 22.04 you could run the following command to setup your LAMP. ( You man install LAMP in your own. or copy the bash file change it to work for your system.)
 
 ```
 cd /var/www/html/vdo/scripts/install/
@@ -182,15 +182,15 @@ composer install
 ```
 
 Or you could build by composer create project command
-Create a VDO Project 9.0.x with Composer
-To install the most recent stable release of VDO 9.0.x run this command:
+Create a VDO Project 10.0.x with Composer
+To install the most recent stable release of VDO 10.0.x run this command:
 ```
-composer create-project webship/vdo-project:^9.0.0-alpha3 /var/www/html --no-dev --no-interaction
+composer create-project webship/vdo-project /var/www/html --no-dev --no-interaction
 ```
 
-To install the dev version of VDO 9.0.x run this command:
+To install the dev version of VDO 10.0.x run this command:
 ```
-composer create-project webship/vdo-project:9.0.x-dev /var/www/html --stability dev --no-interaction
+composer create-project webship/vdo-project:10.0.x-dev /var/www/html --stability dev --no-interaction
 ```
 Status message
 After that delete the composer.josn and composer.lock file from your /var/www/html folder
@@ -203,13 +203,13 @@ To test that the VDO settings are working
 If you go to DEV you can find many bash files that could help you in your development of the profile.
 ```
 cd /var/www/html/dev/
-bash cmd-vdo-drupal9-recommended-project.sh drupal9c1 --install
+bash cmd-vdo-drupal10-recommended-project.sh drupal10c1 --install
 ```
 
 ### Varbase disto for example:
 ```
 cd /var/www/html/dev/
-bash cmd-vdo-varbase9-project.sh varbase9c1 --install --add-users
+bash cmd-vdo-varbase10-project.sh varbase10c1 --install --add-users
 ```
 
 ### Create custom VDO bash:
@@ -236,7 +236,7 @@ echo "|  Build Drupal Project  and add 100 modules in one command";
 echo "*---------------------------------------------------------------------------------------*";
 ```
 
-Have your own YML files. Read them in bash files as arraies of variables.And use them in custom bash file in the way you like:
+Have your own YML files. Read them in bash files as arrays of variables.And use them in custom bash file in the way you like:
 ```
 eval $(parse_yaml ${path_to_the_yml_file}/name-of-file.yml);
 ```

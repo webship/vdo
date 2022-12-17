@@ -9,12 +9,12 @@
     {
       "name": "Vardot",
       "homepage": "https://www.drupal.org/vardot",
-      "role": "Initial building, ongoing maintenance and development"
+      "role": "Supporting organization"
     },
     {
       "name": "Webship",
       "homepage": "https://www.drupal.org/webship",
-      "role": "Volunteer contributions"
+      "role": "Supporting organization"
     }
   ],
   "support": {
@@ -34,11 +34,10 @@
   "require": {
     "composer/installers": "~1.0 || ~2.0",
     "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
-    "drupal/core-composer-scaffold": "~9.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "~9.0",
-    "drush/drush": "~10.0",
-    "drupal/webtest": "~9.0"
+    "drupal/core-composer-scaffold": "~10.0",
+    "drupal/core": "~10.0",
+    "drush/drush": "~11.0"
   },
   "conflict": {
     "drupal/drupal": "*"
