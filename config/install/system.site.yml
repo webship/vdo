@@ -1,0 +1,11 @@
+langcode: en
+name: 'Cucumber app.webship.co'
+mail: admin@webship.co
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /admin/products
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
