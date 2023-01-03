@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Site configuration for VDO site installation.
+ * Site configuration for Visual Distribution Operator (VDO) installation.
  */
 
 use Drupal\Core\Form\FormStateInterface;
@@ -13,7 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
  * Allows the profile to alter the site configuration form.
  */
 function vdo_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
-  $form['site_information']['site_name']['#attributes']['placeholder'] = t('Visual Distribution Operator (VDO)');
+  $form['site_information']['site_name']['#default_value'] = t('Visual Distribution Operator (VDO)');
   $form['site_information']['site_mail']['#default_value'] = 'admin@webship.co';
   $form['admin_account']['account']['name']['#default_value'] = 'webmaster';
   $form['admin_account']['account']['mail']['#default_value'] = 'admin@webship.co';
