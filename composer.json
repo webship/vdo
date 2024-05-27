@@ -34,10 +34,9 @@
   "require": {
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
-    "cweagans/composer-patches": "~1.0",
     "drupal/core-composer-scaffold": "~10.0",
-    "drupal/core": "~10.0",
-    "drush/drush": "~11.0"
+    "drupal/core": "~10.3.0",
+    "drush/drush": "~12.0"
   },
   "conflict": {
     "drupal/drupal": "*"
