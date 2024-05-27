@@ -1,8 +1,8 @@
-name: VDO
+name: Visual Distribution Operator (VDO)
 type: profile
-description: 'Visual Distribution Operator (VDO) Helps Drupal developers manage base code development work cycle for custom distributions/profiles.'
-core_version_requirement: ~10.3.0
-version: 10.0.x-dev
+description: 'Helps Drupal developers manage base code development work cycle for custom recipes/distributions/profiles.'
+core_version_requirement: ~11.0.0
+version: 11.0.x-dev
 package: VDO
 project: vdo
 distribution:

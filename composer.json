@@ -1,6 +1,6 @@
 {
   "name": "webship/vdo",
-  "description": "The Visual Distribution Operator (VDO) management system helps developers manage the base code development work cycle for custom distributions. Constructing your Linux development computer or servers.",
+  "description": "The Visual Distribution Operator (VDO) Helps Drupal developers manage base code development work cycle for custom recipes/distributions/profiles.",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
@@ -34,8 +34,8 @@
   "require": {
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
-    "drupal/core-composer-scaffold": "~10.0",
-    "drupal/core": "~10.3.0",
+    "drupal/core-composer-scaffold": "^11",
+    "drupal/core": "~11.0.0",
     "drush/drush": "~12.0"
   },
   "conflict": {
