@@ -102,7 +102,7 @@ Which a domain could points at it, like vdo.local or vdo.devhub.company-name.com
     /var/www/html/vdo/web
 ```
 
-After Installing Ubuntu 21.04 for example you could run the following bash command to setup LAMP on Ubuntu 21.04
+After Installing Ubuntu 24.04 for example you could run the following bash command to setup LAMP on Ubuntu 24.04
 If you get the VDO bash files from
 
 ```
@@ -168,7 +168,7 @@ echo ${vdo_config}
 
 If "/var/www/html/vdo/config" was printed,which mean we are ready for the next step.
 
-Only for Ubuntu 22.04 you could run the following command to setup your LAMP. ( You man install LAMP in your own. or copy the bash file change it to work for your system.)
+Only for Ubuntu 24.04 you could run the following command to setup your LAMP. ( You man install LAMP in your own. or copy the bash file change it to work for your system.)
 
 ```
 cd /var/www/html/vdo/scripts/install/
